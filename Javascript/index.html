@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Shadows+Into+Light&display=swap" rel="stylesheet">   
+    <title>Reprodutor do Cleison</title>
+    <link rel="icon" href="icons8-music-16.png">
+	<script type="text/javascript" src="script.js"></script>
+
+
+
+</head>
+<body>
+<form name="formulario">
+<h1>Reprodutor de Musicas</h1>
+Escolha um Estilo Musical:<br/>
+<input type="radio" name="musica" value="indie">Indie<br/>
+
+<audio class="indie" src="Twenty One Pilots - Stressed Out _ Tradução _ Legendado.wav"></audio>
+
+<input type="radio" name="musica" value="rock">Rock<br/>
+<audio class="rock" src="Blood & Water.wav"></audio>
+
+<input type="radio" name="musica"value="trap">Trap<br/>
+<audio class="trap" src="XXXTENTACION - SAD!.wav"></audio>
+
+<input type="radio" name="musica"value="sertanejo">Sertanejo<br/>
+<audio class="sertanejo" src="Zé Neto e Cristiano - VAMO TOMAR UMA - DVD Chaaama.wav"></audio>
+
+<input type="radio" name="musica" value="eletronica">Eletronica<br/>
+<audio class="eletro" src="Avicii - Hey Brother (Trap Remix).wav"></audio>
+
+
+<button onclick="verificaMusica();return false;" <a href="#" class="buttonClass"></a>Reproduzir Estilo</button>
+<h2>Para iniciar uma nova musica por favor recarregue a pagina</h2>
+
+</form>
+<br/>
+<div id="musica">
+
+</div>
+<script>
+var divs=document.getElementById('musica');
+</script>
+
+<a href="index2.html">Atividade Dois</a>
+</body>
+</html>
