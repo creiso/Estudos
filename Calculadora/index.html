@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Palette+Mosaic&family=Quicksand:wght@500&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <title>Calcula Nota</title>
+
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            margin:0;
+            padding:0;
+            font-family: 'Oswald', sans-serif;
+font-family: 'Palette Mosaic', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+            background-image:url(calculater\ \(1\).gif);
+   
+
+        }
+        button{
+            background: black;
+            border-radius: 5px;
+            font-family: 'Oswald', sans-serif;
+font-family: 'Palette Mosaic', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+        }
+        
+        .centro{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            padding: 100px;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0,0,0,6);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10);
+            
+        }
+        
+        .centro h1{
+            margin: 0 0 30 px;
+            padding: 0;
+            color: #ff0043;
+            text-align: center;
+        }
+
+        .centro .user-box{
+            position: relative;
+        }
+
+        .centro .user-box input{
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: rgb(2, 1, 1);
+            margin-bottom: 30px;
+            border: none;
+            border-bottom:1px solid rgb(0, 0, 0);
+            outline: none;
+            background: transparent;
+        }
+        .centro .user-box label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+            pointer-events: none;
+            transition: .5s;
+        }
+        .centro .user-box input:focus ~label,
+        .centro .user-box input:valid ~ label{
+            top: -20%;
+            left: 0;
+            color: #ff0043;
+            font-size:12px;
+        }
+
+        .centro form button {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: #ff0043;
+            font-size:16px ;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: .5s;
+            margin-top: 40px;
+            letter-spacing: 4px;
+
+        }
+
+        .centro button:hover{
+            background: #ff0043;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px  #ff0043, 0 0 25px  #ff0043, 0 0 50px  #ff0043, 0 0 100px  #ff0043;
+
+        }
+        .centro button span{
+            position: absolute;
+            display: block;
+        }
+
+        .centro button span :nth-child(1){
+           top: 0;
+           left: -100%;
+           width: 100%;
+           height: 2px;
+           background: linear-gradient(90deg, transparent, #ff0043);
+           animation: btn-anim1 1s linear infinite;
+
+        }
+
+        button {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: #ff0043;
+            font-size:10px ;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: .5s;
+            margin-top: 40px;
+            letter-spacing: 4px;}
+
+        @keyframes btn-anim1 {
+            0%{
+                left: -100%;
+            }
+            50%,100%{
+                left: 100%;
+            }
+            
+        }
+        .centro button span:nth-child(2){
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #ff0043);
+            animation: btn-anim2 1s linear infinite;
+            animation-delay: .25s;
+        }
+
+        @keyframes btn-anim2 {
+            0%{
+                top: -100%;
+            }
+            50%,100%{
+                top: 100%;
+            }
+        }
+        .centro button span :nth-child(3){
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #ff0043);
+            animation: btn-anim3 1s linear infinite;
+            animation-delay: 5s;
+
+        }
+        @keyframes btn-anim3{
+            0%{
+                right: 100%;
+            }
+            50%,100%{
+                right: -100%;
+            }
+        }
+        .centro button span:nth-child(4){
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent,#ff0043);
+            animation: btn-anim4 1s linear infinite;
+            animation-delay: .75s;
+
+
+
+        }
+
+        @keyframes btn-anim4{
+            0%{
+                bottom: -100%;
+            }
+            50%,100%{
+                bottom: 100%;
+            }
+        }
+        h2 {
+
+        }
+
+        
+        
+
+        .footer{
+            position:absolute;
+            top: 99%;
+            left: 99%;
+            width: 1250px;
+            padding: 40px;
+            transform: translate(-100%,20%);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0,0,0,6);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10);
+            align-items: center;
+        }
+        .footer h2{
+            font-style: italic;
+            background: #ff0043;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px  #ff0043, 0 0 25px  #ff0043, 0 0 50px  #ff0043, 0 0 100px  #ff0043;
+            text-align: center;
+        }
+        .footer a{
+            background: #ff0043;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px  #ff0043, 0 0 25px  #ff0043, 0 0 50px  #ff0043, 0 0 100px  #ff0043;
+        }
+        h2{
+            color: blue;
+            font-size: 1em;
+           
+        }
+        h3{ 
+            color: #ff0043;
+            font-size: 1em;
+        }
+       
+    </style>
+    <script>
+        function calcNota(){
+        var num1=formulario.num1.value;
+        var num2=formulario.num2.value;
+        var result =1;
+        var result= parseInt(num1)+parseInt(num2)
+        var result=result/2;
+if(result>=6){
+	
+	divs.innerHTML="<h2 >Aluno Aprovado com a nota </h2>"+result;
+    
+}else if(result <6 && result>0.1){
+    divs.innerHTML="<h3>Aluno Reprovado com nota</h3>"+result;
+}else{
+    divs.innerHTML="<h3>Reprovado com Nota 0</h3>";
+}
+        }
+        </script>
+
+</head>
+<body>
+    <div class="centro">
+        <h1>Calculadora</h1>
+        <form name="formulario">
+            <div class="user-box" >
+                <input type="number" name="num1" required="" min="0" max="10">
+                <label>NOTA 1</label>
+
+            </div>
+            <div class="user-box">
+                <input type="number" name="num2" required=""min="0" max="10">
+                <label>Nota 2</label>
+            </div>
+
+            <div id="result">
+                <p></p>
+            </div>
+            <script>
+                var divs=document.getElementById('result');
+                </script>
+                <button onclick="calcNota();return false;" <a href="#" class="buttonClass "></a>               
+                
+                    <span></span>
+                    
+                <span></span>
+                <span></span>
+                <span></span>
+                Calcular
+            </button>  
+          
+        </form>
+             
+            <a href="index2.html" ><button >Pagina Caminhar</button></a>
+    </div>
+    <footer class="footer">
+        <h2>Desenvolvido por <a href="https://github.com/creiso/">Cleison</a></p>
+    </footer>
+</body>
+</html>
