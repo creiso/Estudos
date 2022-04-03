@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+
+  
+</head>
+<body>
+<form name="formulario">
+
+<h1>Escolha seu Produto</h1>
+Em seguida insira a quantidade:<br/>
+
+
+<input type="radio" name="produto" value="placa" required>Placa de video<br/>
+
+
+
+<input type="radio" name="produto" value="memoria"required>Memoria Ram<br/>
+
+
+<input type="radio" name="produto"value="ssd"required>SSD's<br/>
+
+
+<input type="radio" name="produto"value="teclado"required>Teclados<br/>
+
+
+<input type="radio" name="produto" value="monitor"required>Monitores<br/>
+
+<br/>
+
+<input type="number" name="num" pattern="2-99" {1,2} placeholder="1" min="1" required=""><br/>
+<br/>
+<br/>
+
+
+
+<button onclick="calculaPreco();return false;" <a href="#" class="buttonClass"></a>Selecionar</button>
+
+
+</form>
+<br/>
+<div id="produto">
+
+</div>
+<script>
+var divs=document.getElementById('produto');
+</script>
+
+
+</body>
+</html>
