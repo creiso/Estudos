@@ -11,6 +11,30 @@
         font-size: x-large;
         align-items: center;
     }
+    header{
+        display: flex;
+        background-color: red;
+        border: 3px solid red;
+        
+        justify-content: space-between;
+        
+
+        
+    }
+    
+    #div.bl{
+        display: inline-block;
+        width: 100%;
+        
+
+    }
+    nav{
+        
+        text-align: right;
+    }
+    header img{
+        width: 38px;
+    }
 	form{
 	margin:5vh 20vw 5vh;
 	width: 60vw;
@@ -38,8 +62,7 @@
 	color: red;
     text-align: center;
 	}
-	#produto.ssd{
-        
+	#produto.ssd{   
 	border:2px dashed rgb(58, 2, 2);
 	color: red;
     text-align: center;
@@ -67,7 +90,7 @@
 	color:rgb(255, 0, 0);
 	}
 	#produto img{
-        align-items: center;
+    align-items: center;
 	width:30vw;
 	height:60vh;
 	margin-left:0%;
@@ -99,5 +122,14 @@
         linear-gradient(rgba(23, 15, 24, 1), rgb(207, 23, 23));
         box-shadow: 0 0 5px  rgb(223, 15, 15), 0 0 25px  rgb(223, 15, 15), 0 0 50px rgb(223, 15, 15), 0 0 100px  rgb(223, 15, 15);
         transition-duration:0.5s;
+    }
+    a{
+        color: black;
+        
+        margin-right: 30px;
+        border-color: black;
+        border: 18px;
+        text-shadow:2px 2px 2px black;
+        
     }
      
