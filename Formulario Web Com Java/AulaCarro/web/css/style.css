@@ -1,0 +1,142 @@
+      
+body{
+    
+                   
+                color: black;
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+                font-family: 'Palette Mosaic', cursive;
+                font-family: 'Shadows Into Light', cursive;
+                text-align: center;
+                background-image: url(carroos.png)
+            
+        }
+        #button {
+            font-family: 'Oswald', sans-serif;
+            font-family: 'Palette Mosaic', cursive;
+            font-family: 'Quicksand', sans-serif;
+            font-family: 'Rubik Moonrocks', cursive;
+            font-family: 'Rubik Wet Paint', cursive;
+            width:40vh;
+            height:5vw;
+            border-width:1px;
+            color:rgb(11, 4, 11);
+            border-color:rgb(255, 255, 255);
+            font-weight:bold;
+            
+            border-top-left-radius:28px;
+            border-top-right-radius:28px;
+            border-bottom-left-radius:28px;
+            border-bottom-right-radius:28px;
+            
+                   background:linear-gradient(rgba(23, 15, 24, 1), rgb(0, 0, 0));
+          }
+       
+        #button:hover{
+            border-color:rgb(0, 0, 0);
+            color: rgb(206, 206, 206);
+            text-shadow: 1px 1px 0px rgb(0, 0, 0);
+         
+            background:linear-gradient(rgba(23, 15, 24, 1), rgb(0, 0, 0));
+            box-shadow: 0 0 5px  #87CEFA, 0 0 25px  #87CEFA, 0 0 50px #87CEFA, 0 0 100px  #87CEFA;
+            transition-duration:0.1s;
+          }
+          input{
+            border-top-left-radius:28px;
+            border-top-right-radius:28px;
+            border-bottom-left-radius:28px;
+            border-bottom-right-radius:28px;
+          }
+          input:hover{
+            border-color:rgb(0, 0, 0);
+            color: rgb(206, 206, 206);
+            text-shadow: 1px 1px 0px rgb(0, 0, 0);
+            border-top-left-radius:28px;
+            border-top-right-radius:28px;
+            border-bottom-left-radius:28px;
+            border-bottom-right-radius:28px;
+            background:#87CEFA;
+            box-shadow: 0 0 5px  #87CEFA, 0 0 25px  #87CEFA, 0 0 50px rgb(135.206.250), 0 0 100px  rgb(135.206.250);
+            transition-duration:0.1s;
+          }
+          .centro{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 350px;
+            padding: 100px;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0,0,0,6);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10);
+            
+        }
+        
+        .centro h1{
+            margin: 0 0 px;
+            padding: 0;
+            color: #87CEFA;
+            text-align: center;
+        }
+
+        .centro .user-box{
+            position: relative;
+        }
+
+
+        .centro .user-box label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+            pointer-events: none;
+            transition: .5s;
+        }
+        .centro .user-box input:focus ~label,
+        .centro .user-box input:valid ~ label{
+            top: -20%;
+            left: 0;
+            color: #ff0043;
+            font-size:12px;
+        }
+
+        .centro form button {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: #ff0043;
+            font-size:16px ;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: .5s;
+            margin-top: 40px;
+            letter-spacing: 4px;
+
+        }
+
+        .centro button:hover{
+            background: #ff0043;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px  #ff0043, 0 0 25px  #ff0043, 0 0 50px  #ff0043, 0 0 100px  #ff0043;
+
+        }
+        .centro button span{
+            position: absolute;
+            display: block;
+        }
+
+        .centro button span :nth-child(1){
+           top: 0;
+           left: -100%;
+           width: 100%;
+           height: 2px;
+           background: linear-gradient(90deg, transparent, #ff0043);
+           animation: btn-anim1 1s linear infinite;
+
+        }
